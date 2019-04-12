@@ -2,7 +2,7 @@
 
 ## World Cities Population
 
-##### by Bojana Lazičić-Protić
+#### by Bojana Lazičić-Protić
 
 \
 Create MySQL database user and provide following parameters to parameters.yml file:
@@ -16,23 +16,23 @@ Unpack project and move into project directory.
 Install the dependencies and start the server:
 
 ```sh
-$ composer install
-$ php bin/console server:start
+composer install
+php bin/console server:start
 ```
 
 Run commands to create database (test_api) and table (cities):
 
 ```sh
-$ php bin/console doctrine:database:create
-$ php bin/console doctrine:schema:update --force
+php bin/console doctrine:database:create
+php bin/console doctrine:schema:update --force
 ```
 
 To populate data into database, run one of commands:
 
 ```sh
-$ php bin/console population:get	// this will populate table with top 100 
+php bin/console population:get          // this will populate table with top 100 
                                         // most populated cities
-$ php bin/console population:get [num]	// this will populate table with [num] cities
+php bin/console population:get [num]	// this will populate table with [num] cities
                                         // if city exist in database, it will not be 
                                         // entered again, only 'population' column will
                                         // be updated
@@ -47,14 +47,14 @@ Try one of available APIs:
 To dump data to file and delete data from database, run one of commands (filename is automatically generated in form 'dump_[timestamp]'):
 
 ```sh
-$ php bin/console population:clear	   // dumps data to default '/tmp/' folder
-$ php bin/console population:clear dir	// dumps data to dir folder
+php bin/console population:clear        // dumps data to default '/tmp/' folder
+php bin/console population:clear dir    // dumps data to dir folder
 ```
 
 Stop the server:
 
 ```sh
-$ php bin/console server:stop
+php bin/console server:stop
 ```
 
 ### Note
